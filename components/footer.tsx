@@ -34,8 +34,13 @@ export default function Footer() {
             <h3 className="font-serif text-lg mb-4">Liens rapides</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/dream-cafe" className="text-stone-400 hover:text-[#C6A76D]">
+                  Dream Café
+                </Link>
+              </li>
+              <li>
                 <Link href="/studio-photo" className="text-stone-400 hover:text-[#C6A76D]">
-                  Photo
+                  Studio Photo
                 </Link>
               </li>
               <li>
@@ -44,13 +49,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/dream-cafe" className="text-stone-400 hover:text-[#C6A76D]">
-                  Dream Café
-                </Link>
-              </li>
-              <li>
                 <Link href="/evenements" className="text-stone-400 hover:text-[#C6A76D]">
-                  Événements
+                  Réception
                 </Link>
               </li>
               <li>

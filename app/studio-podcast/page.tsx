@@ -14,7 +14,7 @@ export default function StudioPodcastPage() {
             <div>
               <span className="text-5xl mb-4 block">🎧</span>
               <h1 className="font-serif text-4xl md:text-5xl font-medium mb-6 text-stone-800">
-                Studios podcast & Live Stream
+                Studios podcast
               </h1>
               <p className="text-stone-600 mb-8 leading-relaxed text-lg">
                 Un studio podcast premium, sonorisé et esthétique, équipé pour les formats longs, interviews, capsules
@@ -76,7 +76,7 @@ export default function StudioPodcastPage() {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="font-serif text-2xl mb-6 text-stone-800">Vidéo & Streaming</h3>
+              <h3 className="font-serif text-2xl mb-6 text-stone-800">Vidéo</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-[#C6A76D] mr-3 mt-0.5" />

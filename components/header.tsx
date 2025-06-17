@@ -30,49 +30,20 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Accueil
-            </Link>
-            {/* Studios Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                className="flex items-center text-stone-800 hover:text-[#C6A76D] transition-colors"
-                type="button"
-                aria-haspopup="true"
-                aria-expanded={isStudiosOpen}
-                // onClick reste utile pour mobile
-                onClick={() => setIsStudiosOpen((open) => !open)}
-              >
-                Studios <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {isStudiosOpen && (
-                <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg z-10">
-                  <Link
-                    href="/studio-photo"
-                    className="block px-4 py-2 text-stone-800 hover:bg-[#F5F5F0] hover:text-[#C6A76D]"
-                    onClick={() => setIsStudiosOpen(false)}
-                  >
-                    Studio Photo
-                  </Link>
-                  <Link
-                    href="/studio-podcast"
-                    className="block px-4 py-2 text-stone-800 hover:bg-[#F5F5F0] hover:text-[#C6A76D]"
-                    onClick={() => setIsStudiosOpen(false)}
-                  >
-                    Studio Podcast
-                  </Link>
-                </div>
-              )}
-            </div>
             <Link href="/dream-cafe" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
               Dream Café
             </Link>
+            <Link href="/studio-photo" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
+              Studio photo
+            </Link>
+            <Link href="/studio-podcast" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
+              Podcast
+            </Link>
             <Link href="/evenements" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Événements
+              Réception
+            </Link>
+            <Link href="/abonnement" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
+              Abonnement
             </Link>
             <Link href="/a-propos" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
               À propos
@@ -107,40 +78,20 @@ export default function Header() {
               >
                 Accueil
               </Link>
-              {/* Studios Dropdown Mobile */}
-              <div>
-                <button
-                  className="flex items-center w-full text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                  onClick={() => setIsStudiosOpen((open) => !open)}
-                  type="button"
-                >
-                  Studios <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                {isStudiosOpen && (
-                  <div className="pl-4 flex flex-col">
-                    <Link
-                      href="/studio-photo"
-                      className="py-2 text-stone-800 hover:text-[#C6A76D]"
-                      onClick={() => {
-                        setIsStudiosOpen(false)
-                        setIsMenuOpen(false)
-                      }}
-                    >
-                      Studio Photo
-                    </Link>
-                    <Link
-                      href="/studio-podcast"
-                      className="py-2 text-stone-800 hover:text-[#C6A76D]"
-                      onClick={() => {
-                        setIsStudiosOpen(false)
-                        setIsMenuOpen(false)
-                      }}
-                    >
-                      Studio Podcast
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/studio-photo"
+                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Studio photo
+              </Link>
+              <Link
+                href="/studio-podcast"
+                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Podcast
+              </Link>
               <Link
                 href="/dream-cafe"
                 className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
@@ -153,7 +104,10 @@ export default function Header() {
                 className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Événements
+                Réception
+              </Link>
+              <Link href="/abonnement" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
+                Abonnement
               </Link>
               <Link
                 href="/a-propos"

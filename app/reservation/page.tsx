@@ -139,12 +139,34 @@ export default function ReservationPage() {
       </section>
 
       {/* SumUpBooking Integration */}
-      <section className="py-16 bg-[#F5F5F0]" id="booking-calendar">
-        <div className="container mx-auto px-4">
-          <h2 className="font-serif text-3xl text-center mb-8 text-stone-800">Réservez votre créneau</h2>
-
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <SumUpBookingEmbed height={800} />
+      <section
+        className="relative py-16 bg-gradient-to-br from-[#F5F5F0] via-[#f7efe5] to-[#e9e4ff]"
+        id="booking-calendar"
+      >
+        <div className="w-full px-0 flex flex-col items-center">
+          <div className="mb-8 text-center w-full max-w-5xl mx-auto px-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/80 shadow border border-[#C6A76D] mb-4 animate-fade-in">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke="#C6A76D" strokeWidth="2" />
+                <path
+                  d="M8 12l2 2 4-4"
+                  stroke="#C6A76D"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span className="text-[#C6A76D] font-semibold text-sm">Paiement sécurisé</span>
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl font-medium mb-4 text-stone-800 animate-fade-in">
+              Réservez votre créneau
+            </h2>
+            <p className="text-stone-600 text-lg max-w-xl mx-auto animate-fade-in">
+              Réservation en ligne simple et rapide. Choisissez votre date, votre espace, et payez en toute sécurité.
+            </p>
+          </div>
+          <div className="w-full">
+            <SumUpBookingEmbed height={700} />
           </div>
         </div>
       </section>

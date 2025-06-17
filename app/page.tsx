@@ -49,7 +49,7 @@ export default function Home() {
 
             <UniverseCard
               icon="🌂"
-              title="Boutique LAYONN"
+              title="Corner LAYONN"
               description="Un corner store élégant mettant en lumière la marque de mode haut de gamme Layonn et ses collections slow fashion."
               color="#E6DED3"
               image="/boutique.jpg?height=400&width=600"
@@ -121,7 +121,7 @@ export default function Home() {
                 className="mt-8 border-[#F89CCF] text-[#F89CCF] hover:bg-[#F89CCF] hover:text-white rounded-none"
                 asChild
               >
-                <Link href="/dream_cafe">
+                <Link href="/dream-cafe">
                   Découvrir le Dream Café <ChevronRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -173,7 +173,73 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+{/* Abonnements Section */}
+      <section className="bg-[#F5F5F0] py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-12 text-center text-stone-800">
+            Nos abonnements exclusifs
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Abonnement Creator */}
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">🎙</span>
+                <h3 className="font-serif text-2xl font-medium text-stone-800">Abonnement Creator</h3>
+              </div>
+              <p className="text-[#C6A76D] font-bold mb-2">Dès 39,90€/mois • Limité à 40 membres</p>
+              <p className="text-stone-700 mb-4">
+                Un abonnement exclusif pour créateurs de contenu, artistes, influenceurs ou entrepreneurs passionnés. Tournez, shootez, connectez-vous et vibrez au cœur du Dream Studio à Montpellier.
+              </p>
+              <ul className="mb-4 text-stone-700 space-y-2">
+                <li>• 1h/semaine (4h/mois) dans l’espace de votre choix : studio podcast, studio photo/vidéo, Dream Coffee</li>
+                <li>• 1 boisson chaude + 1 boisson fraîche offertes à chaque venue</li>
+                <li>• Accès aux afterworks du Studio (invitation privée)</li>
+                <li>• -20% sur toutes les consommations au Dream Coffee</li>
+                <li>• -20% sur la marque LAYONN (en boutique)</li>
+              </ul>
+              <div className="mb-4">
+                <span className="font-semibold text-stone-800">Formules dégressives :</span>
+                <ul className="ml-4 text-stone-700">
+                  <li>• 1 mois : 59,90€ TTC</li>
+                  <li>• 6 mois : 49,90€/mois</li>
+                  <li>• 12 mois : 39,90€/mois</li>
+                </ul>
+              </div>
+              <p className="text-sm text-stone-500 mb-2">🚨 Seulement 40 abonnements disponibles pour garantir une expérience premium et fluide.</p>
+            </div>
+            {/* Abonnement Pro & B2B */}
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">💼</span>
+                <h3 className="font-serif text-2xl font-medium text-stone-800">Abonnement Pro & B2B</h3>
+              </div>
+              <p className="text-[#C6A76D] font-bold mb-2">Dès 159€/mois HT • Limité à 20 entreprises</p>
+              <p className="text-stone-700 mb-4">
+                Pensé pour les entrepreneurs, agences, freelances et marques qui veulent produire du contenu, gagner en notoriété et profiter d’un écosystème dynamique.
+              </p>
+              <ul className="mb-4 text-stone-700 space-y-2">
+                <li>• 1h d’accès/semaine à nos espaces (podcast, shooting ou réunion)</li>
+                <li>• Boissons offertes à chaque visite (jusqu’à 2 pers.)</li>
+                <li>• 1 mise en avant mensuelle sur notre Instagram (interview ou capsule vidéo)</li>
+                <li>• -20% sur les consommations au Dream Coffee</li>
+                <li>• -20% sur la marque LAYONN (mode et accessoires)</li>
+                <li>• 1 événement ou workshop/trimestre à tarif préférentiel</li>
+                <li>• Accès aux afterworks professionnels du Studio</li>
+              </ul>
+              <div className="mb-4">
+                <span className="font-semibold text-stone-800">Formules dégressives :</span>
+                <ul className="ml-4 text-stone-700">
+                  <li>• 1 mois : 199€ HT</li>
+                  <li>• 6 mois : 179€/mois</li>
+                  <li>• 12 mois : 159€/mois</li>
+                </ul>
+              </div>
+              <p className="text-sm text-stone-500 mb-2">➕ Options disponibles : montage, régie, prestations créatives sur mesure.</p>
+              <p className="text-sm text-stone-500">🚨 Seulement 20 entreprises pour garantir un accompagnement personnalisé.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Reservation CTA */}
       <ReservationCta />
 
