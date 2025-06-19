@@ -16,11 +16,19 @@ export default function StudioPhotoPage() {
               <h1 className="font-serif text-4xl md:text-5xl font-medium mb-6 text-stone-800">
                 Studio photo professionnel
               </h1>
-              <p className="text-stone-600 mb-8 leading-relaxed text-lg">
-                Un espace lumineux, à l'étage et au sous-sol, adapté aux shootings pro, portraits, packshots ou création
-                de contenu social media. Équipé en lumière naturelle et artificielle, fonds multiples, zones modulables.
-              </p>
-              <Button asChild className="bg-[#C6A76D] hover:bg-[#b89355] text-white rounded-none px-8 py-6">
+
+              {/* Ajout des infos clés */}
+              <div className="bg-[#F5F5F0] bg-opacity-60 rounded-lg p-6 mb-6 shadow flex flex-col gap-3">
+                <h3 className="font-serif text-xl text-[#C6A76D] mb-2">Idéal si tu es...</h3>
+                <ul className="list-disc pl-5 text-stone-700 space-y-1 text-base">
+                  <li>Photographe ou vidéaste en quête d’un studio équipé et flexible</li>
+                  <li>Modèle, influenceur ou marque voulant réaliser un shooting pro</li>
+                  <li>Créateur de contenu avec besoin de fonds variés, lumières, réflecteurs</li>
+                  <li>En recherche d’un espace pour tes lookbooks, campagnes ou portraits</li>
+                  <li className="mt-2 font-semibold text-[#C6A76D]">| Tout est là pour créer un visuel impactant et professionnel, à ton image.</li>
+                </ul>
+              </div>
+              <Button asChild className="border-[#C6A76D] text-[#C6A76D] bg-white hover:text-white rounded-none px-8 py-6">
                 <Link href="https://booksy.com/fr-fr/s/478780/widget?pid=widget&appointmentTypes%5B%5D=877799">
                   <Camera className="mr-2 h-5 w-5" /> Réserver le studio
                 </Link>

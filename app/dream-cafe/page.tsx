@@ -14,11 +14,19 @@ export default function DreamCafePage() {
             <div>
               <span className="text-5xl mb-4 block">☕</span>
               <h1 className="font-serif text-4xl md:text-5xl font-medium mb-6 text-stone-800">Le Dream Café</h1>
-              <p className="text-stone-600 mb-8 leading-relaxed text-lg">
-                Un coffee shop girly et cosy, parfait pour se retrouver, brainstormer, créer ou simplement savourer un
-                moment. Chai latte, espresso, citronnades maison, ambiance rose poudré et décoration instagramable.
-              </p>
-              <Button asChild className="bg-[#F89CCF] hover:bg-[#e77db8] text-white rounded-none px-8 py-6">
+              {/* Ajout des infos clés */}
+              <div className="bg-[#FAD5E5] bg-opacity-30 rounded-lg p-6 mb-6 shadow flex flex-col gap-3">
+                <h3 className="font-serif text-xl text-[#C6A76D] mb-2">Idéal si tu veux...</h3>
+                <ul className="list-disc pl-5 text-stone-700 space-y-1 text-base">
+                  <li>Un lieu <b>Instagramable</b> pour shooter ton contenu lifestyle</li>
+                  <li>Créer des <b>reels, vlogs ou interviews</b> dans une ambiance chaleureuse</li>
+                  <li>Tourner des vidéos dans un décor cosy, avec une belle lumière naturelle</li>
+                  <li>Travailler ou brainstormer avec d'autres créateurs autour d’un café</li>
+                  <li>Disposer d’un espace stylé pour faire vivre ton univers de marque</li>
+                  <li>Un spot visuel, créatif et intimiste pour donner vie à tes idées en toute liberté.</li>
+                </ul>
+              </div>
+              <Button asChild className=" hover:bg-[#F89CCF] text-[#F89CCF] rounded-none px-8 py-6">
                 <Link href="/reservation#booking-calendar">
                   <Calendar className="mr-2 h-5 w-5" /> Réserver une table
                 </Link>
