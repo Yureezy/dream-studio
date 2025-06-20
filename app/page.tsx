@@ -9,45 +9,49 @@ import VideoHero from "@/components/video-hero"
 const univers = [
 	{
 		key: "dream-cafe",
-		bg: "linear-gradient(0deg,rgb(0, 0, 0) 0%, rgba(0,0,0,0.08) 100%), url(/cafe.png) center/cover no-repeat fixed", 
+		bg: "linear-gradient(0deg,rgb(245, 182, 220) 0%, rgba(0,0,0,0.08) 100%), url(/cafe.png) center/cover no-repeat fixed",
 		slides: [
 			{
-				effect: "fade-in-left",
+				effect: "",
 				content: (
-					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center tracking-tight leading-tight">
-						Le Dream <br />
-						<span className="text-[#e8dcca] drop-shadow-[0_2px_10px_rgba(232,220,202,0.3)]">Café</span>
+					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
+						Le Dream 
+						<span className="text-[#e8dcca] drop-shadow-[0_2px_10px_rgba(232,220,202,0.3)] fade-in-span">Café</span>
 					</h2>
 				)
 			},
 			{
-				effect: "fade-in-right", 
+				effect: "",
 				content: (
-					<p className="text-white text-2xl md:text-3xl font-medium mb-16 max-w-3xl mx-auto text-center leading-relaxed"
-					   style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)"}}>
-					  Un coffee shop girly et cosy, parfait pour se retrouver, brainstormer, créer ou savourer un moment.
-					  <span className="block mt-4 text-[#e8dcca] text-xl italic">Votre bulle créative au cœur de Montpellier</span>
-					</p>
+					<div className="w-full flex">
+					  <p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
+					     style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+					    Un coffee shop girly et cosy, parfait pour se retrouver, brainstormer, créer ou savourer un moment.
+					    <span className="block mt-4 text-[#e8dcca] text-xl italic fade-in-span">Votre bulle créative au cœur de Montpellier</span>
+					  </p>
+					</div>
 				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-xl md:text-2xl mb-10 leading-relaxed text-center max-w-3xl mx-auto">
-					  <span className="block font-serif text-2xl mb-6">Idéal si tu veux :</span>
-					  <span className="block mb-3">Un lieu <span className="font-medium text-[#e8dcca]">Instagramable</span> pour shooter ton contenu lifestyle</span>
-					  <span className="block mb-3">Créer des <span className="font-medium text-[#e8dcca]">reels, vlogs ou interviews</span> dans une ambiance chaleureuse</span>
-					  <span className="block mb-3">Tourner des vidéos dans un décor cosy, avec une belle lumière naturelle</span>
-					  <span className="block mb-3">Travailler ou brainstormer avec d'autres créateurs autour d'un café</span>
-					  <span className="block">Disposer d'un espace stylé pour faire vivre ton univers de marque</span>
-					  <span className="block mt-8 font-serif text-lg text-[#e8dcca]">Un spot visuel, créatif et intimiste pour donner vie à tes idées en toute liberté</span>
-					</p>
+					<div className="w-full flex justify-end">
+					  <p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
+					    <span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
+					    <span className="block mb-3 fade-in-span">Un lieu <span className="font-medium text-[#e8dcca]">Instagramable</span> pour shooter ton contenu lifestyle</span>
+					    <span className="block mb-3 fade-in-span">Créer des <span className="font-medium text-[#e8dcca]">reels, vlogs ou interviews</span> dans une ambiance chaleureuse</span>
+					    <span className="block mb-3 fade-in-span">Tourner des vidéos dans un décor cosy, avec une belle lumière naturelle</span>
+					    <span className="block mb-3 fade-in-span">Travailler ou brainstormer avec d'autres créateurs autour d'un café</span>
+					    <span className="block fade-in-span">Disposer d'un espace stylé pour faire vivre ton univers de marque</span>
+					    <span className="block mt-8 font-serif text-lg text-[#e8dcca] fade-in-span">Un spot visuel, créatif et intimiste pour donner vie à tes idées en toute liberté</span>
+					  </p>
+					</div>
 				)
 			},
 			{
-				effect: "fade-in-up", 
+				effect: "",
 				content: (
-					<div className="flex justify-end w-full max-w-3xl mx-auto">
+					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
@@ -67,33 +71,43 @@ const univers = [
 		bg: "linear-gradient(0deg, #E6DED3cc 0%, rgba(0,0,0,0.08) 100%), url(/boutique.jpg) center/cover no-repeat",
 		slides: [
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<h2 className="font-serif text-6xl md:text-7xl font-bold text-white drop-shadow-lg mb-10 text-center">
-						Boutique LAYONN
+					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
+						Boutique <span className="text-[#E6DED3] drop-shadow-[0_2px_10px_rgba(230,221,211,0.3)] fade-in-span">LAYONN</span>
 					</h2>
-				),
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl mx-auto text-center">
-						Un corner store élégant mettant en lumière la marque de mode haut de gamme Layonn et ses collections slow fashion.
-					</p>
-				),
+					<div className="w-full flex">
+					  <p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
+					     style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+					    Un corner store élégant mettant en lumière la marque de mode haut de gamme Layonn et ses collections slow fashion.
+					    <span className="block mt-4 text-[#E6DED3] text-xl italic fade-in-span">L’expérience shopping unique à Montpellier</span>
+					  </p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-center">
-						Découvrez nos parfums, accessoires et pièces de prêt-à-porter conçus avec passion et éthique.<br />
-						<span className="block font-semibold text-[#C6A76D] mt-4">Une expérience shopping unique à Montpellier.</span>
-					</p>
-				),
+					<div className="w-full flex justify-end">
+					  <p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
+					    <span className="block font-serif text-2xl mb-6 fade-in-span">Notre sélection :</span>
+					    <span className="block mb-3 fade-in-span">Parfums, accessoires et prêt-à-porter conçus avec passion et éthique</span>
+					    <span className="block mb-3 fade-in-span">Matériaux nobles, design intemporel, production éthique</span>
+					    <span className="block mb-3 fade-in-span">Conseils personnalisés et accueil chaleureux</span>
+					    <span className="block mt-8 font-serif text-lg text-[#E6DED3] fade-in-span">Un univers raffiné et inspirant, pensé pour durer</span>
+					  </p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
+					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
@@ -103,7 +117,8 @@ const univers = [
 							Découvrir la boutique <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
-				),
+					</div>
+				)
 			},
 		]
 	},
@@ -112,37 +127,44 @@ const univers = [
 		bg: "linear-gradient(0deg, #F5F5F0cc 0%, rgba(0,0,0,0.08) 100%), url(/photo.jpg) center/cover no-repeat",
 		slides: [
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<h2 className="font-serif text-6xl md:text-7xl font-bold mb-10 text-stone-800 drop-shadow-lg text-center">
-						Studio photo professionnel
+					<h2 className="font-serif text-7xl md:text-8xl font-bold text-stone-800 drop-shadow-[0_5px_15px_rgba(0,0,0,0.15)] mb-10 text-center fade-in-heading">
+						Studio <span className="text-[#F5F5F0] drop-shadow-[0_2px_10px_rgba(245,245,240,0.3)] fade-in-span">Photo</span>
 					</h2>
-				),
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-stone-800 text-2xl md:text-3xl font-medium mb-10 max-w-3xl mx-auto text-center">
-						Un espace lumineux, à l'étage et au sous-sol, adapté aux shootings pro, portraits, packshots ou création de contenu social media.
-					</p>
-				),
+					<div className="w-full flex">
+						<p className="text-stone-800 text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
+						  style={{ textShadow: "0 2px 16px rgba(0,0,0,0.10)" }}>
+						  Un espace lumineux, à l'étage et au sous-sol, adapté aux shootings pro, portraits, packshots ou création de contenu social media.
+						  <span className="block mt-4 text-[#F5F5F0] text-xl italic fade-in-span">Lumière naturelle, fonds multiples, zones modulables</span>
+						</p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-stone-800 text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-center">
-						<b>Idéal si tu es :</b><br />
-						Photographe ou vidéaste en quête d’un studio équipé et flexible.<br />
-						Modèle, influenceur ou marque voulant réaliser un shooting pro.<br />
-					Créateur de contenu avec besoin de fonds variés, lumières, réflecteurs.<br />
-						En recherche d’un espace pour tes lookbooks, campagnes ou portraits.<br />
-						<span className="block font-semibold text-[#C6A76D] mt-4">Tout est là pour créer un visuel impactant et professionnel, à ton image.</span>
-					</p>
-				),
+					<div className="w-full flex justify-end">
+						<p className="text-stone-800 text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
+							<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu es :</span>
+							<span className="block mb-3 fade-in-span">Photographe ou vidéaste en quête d’un studio équipé et flexible</span>
+							<span className="block mb-3 fade-in-span">Modèle, influenceur ou marque voulant réaliser un shooting pro</span>
+							<span className="block mb-3 fade-in-span">Créateur de contenu avec besoin de fonds variés, lumières, réflecteurs</span>
+							<span className="block mb-3 fade-in-span">En recherche d’un espace pour tes lookbooks, campagnes ou portraits</span>
+							<span className="block mt-8 font-serif text-lg text-[#F5F5F0] fade-in-span">Tout est là pour créer un visuel impactant et professionnel, à ton image</span>
+						</p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
+					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
@@ -152,7 +174,8 @@ const univers = [
 							Découvrir le Studio Photo <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
-				),
+					</div>
+				)
 			},
 		]
 	},
@@ -161,37 +184,44 @@ const univers = [
 		bg: "linear-gradient(0deg, #bc43c7cc 0%, rgba(0,0,0,0.08) 100%), url(/podcast.jpg) center/cover no-repeat",
 		slides: [
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<h2 className="font-serif text-6xl md:text-7xl font-bold mb-10 text-white drop-shadow-lg text-center">
-						Studios podcast
+					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
+						Studio <span className="text-[#bc43c7] drop-shadow-[0_2px_10px_rgba(188,67,199,0.3)] fade-in-span">Podcast</span>
 					</h2>
-				),
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl mx-auto text-center">
-						Un studio podcast premium, sonorisé et esthétique, équipé pour les formats longs, interviews, capsules ou lives.
-					</p>
-				),
+					<div className="w-full flex">
+						<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
+						  style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						  Un studio podcast premium, sonorisé et esthétique, équipé pour les formats longs, interviews, capsules ou lives.
+						  <span className="block mt-4 text-[#bc43c7] text-xl italic fade-in-span">Son pro, multicaméra, régie technique</span>
+						</p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-center">
-						<b>Idéal si tu veux :</b><br />
-						Enregistrer un podcast solo ou à plusieurs, dans un décor chaleureux.<br />
-						Créer du contenu vidéo pédagogique ou inspirant (formations, interviews).<br />
-						Lancer ta chaîne YouTube ou ton format de talk filmé.<br />
-						Te concentrer sur ton contenu : matériel prêt à l’emploi, son & lumière optimisés.<br />
-						<span className="block font-semibold text-[#C6A76D] mt-4">Une ambiance feutrée et pro, pour poser ta voix et propulser tes idées.</span>
-					</p>
-				),
+					<div className="w-full flex justify-end">
+						<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
+							<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
+							<span className="block mb-3 fade-in-span">Enregistrer un podcast solo ou à plusieurs, dans un décor chaleureux</span>
+							<span className="block mb-3 fade-in-span">Créer du contenu vidéo pédagogique ou inspirant (formations, interviews)</span>
+							<span className="block mb-3 fade-in-span">Lancer ta chaîne YouTube ou ton format de talk filmé</span>
+							<span className="block mb-3 fade-in-span">Te concentrer sur ton contenu : matériel prêt à l’emploi, son & lumière optimisés</span>
+							<span className="block mt-8 font-serif text-lg text-[#bc43c7] fade-in-span">Une ambiance feutrée et pro, pour poser ta voix et propulser tes idées</span>
+						</p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
+					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
@@ -201,7 +231,8 @@ const univers = [
 							Découvrir le Studio Podcast <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
-				),
+					</div>
+				)
 			},
 		]
 	},
@@ -210,37 +241,44 @@ const univers = [
 		bg: "linear-gradient(0deg, #C6A76Dcc 0%, rgba(0,0,0,0.08) 100%), url(/reception.jpg) center/cover no-repeat",
 		slides: [
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<h2 className="font-serif text-6xl md:text-7xl font-bold mb-10 text-white drop-shadow-lg text-center">
-						Lieux de réception & formation
+					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
+						Lieux de <span className="text-[#C6A76D] drop-shadow-[0_2px_10px_rgba(198,167,109,0.3)] fade-in-span">réception</span> & formation
 					</h2>
-				),
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl mx-auto text-center">
-						Un espace chaleureux, totalement privatisable pour vos afterworks, lancements de produits, formations et ateliers.
-					</p>
-				),
+					<div className="w-full flex">
+						<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
+						  style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						  Un espace chaleureux, totalement privatisable pour vos afterworks, lancements de produits, formations et ateliers.
+						  <span className="block mt-4 text-[#C6A76D] text-xl italic fade-in-span">Ambiance premium, équipements modernes, équipe dédiée</span>
+						</p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
-					<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-center">
-						<b>Idéal si tu veux :</b><br />
-						Organiser un coaching privé, un shooting VIP ou une masterclass intimiste.<br />
-						Créer une expérience exclusive pour le lancement d’une marque ou d’un produit.<br />
-						Proposer un atelier confidentiel (développement perso, beauté, formation...).<br />
-						Bénéficier d’un lieu multifonction, adaptable à ton univers.<br />
-						<span className="block font-semibold text-[#F5F5F0] mt-4">Un espace rare pour connecter, transmettre, vibrer et créer sans distraction.</span>
-					</p>
-				),
+					<div className="w-full flex justify-end">
+						<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
+							<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
+							<span className="block mb-3 fade-in-span">Organiser un coaching privé, un shooting VIP ou une masterclass intimiste</span>
+							<span className="block mb-3 fade-in-span">Créer une expérience exclusive pour le lancement d’une marque ou d’un produit</span>
+							<span className="block mb-3 fade-in-span">Proposer un atelier confidentiel (développement perso, beauté, formation...)</span>
+							<span className="block mb-3 fade-in-span">Bénéficier d’un lieu multifonction, adaptable à ton univers</span>
+							<span className="block mt-8 font-serif text-lg text-[#C6A76D] fade-in-span">Un espace rare pour connecter, transmettre, vibrer et créer sans distraction</span>
+						</p>
+					</div>
+				)
 			},
 			{
-				effect: "fade-in-up",
+				effect: "",
 				content: (
+					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
@@ -250,7 +288,8 @@ const univers = [
 							Découvrir l’espace <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
-				),
+					</div>
+				)
 			},
 		]
 	},
@@ -301,100 +340,6 @@ export default function Home() {
     </section>
   )
 })}
-
-			{/* 4. Focus Dream Café */}
-			{(() => {
-				const [ref, visible] = useReveal()
-				return (
-					<section ref={ref} className="relative py-12 bg-gradient-to-br from-[#FAD5E5] via-white to-[#F5F5F0]">
-						<div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-							<div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl animate-fade-in"
-								 style={{backgroundAttachment: "fixed"}}>
-								<img
-									src="/cafe.png"
-									alt="Dream Café"
-									className="object-cover w-full h-full"
-								/>
-							</div>
-							<div className={visible ? "fade-in-left" : "opacity-0"}>
-								<span className="text-5xl mb-4 block">☕</span>
-								<h2 className="font-serif text-4xl font-medium mb-6 text-stone-800">Le Dream Café</h2>
-								<p className="text-stone-600 mb-6 text-lg">
-									Un coffee shop girly et cosy, parfait pour se retrouver, brainstormer, créer ou simplement savourer un moment. Chai latte, espresso, citronnades maison, ambiance rose poudré et décoration instagramable.
-								</p>
-								{/* Ajout des infos clés */}
-								<div className="bg-[#FAD5E5] bg-opacity-30 rounded-lg p-6 mb-6 shadow flex flex-col gap-3">
-									<h3 className="font-serif text-xl text-[#C6A76D] mb-2">Idéal si tu veux...</h3>
-									<ul className="list-disc pl-5 text-stone-700 space-y-1 text-base">
-										<li>Un lieu <b>Instagramable</b> pour shooter ton contenu lifestyle</li>
-										<li>Créer des <b>reels, vlogs ou interviews</b> dans une ambiance chaleureuse</li>
-										<li>Tourner des vidéos dans un décor cosy, avec une belle lumière naturelle</li>
-										<li>Travailler ou brainstormer avec d'autres créateurs autour d’un café</li>
-										<li>Disposer d’un espace stylé pour faire vivre ton univers de marque</li>
-										<li className="mt-2 font-semibold text-[#C6A76D]">| Un spot visuel, créatif et intimiste pour donner vie à tes idées en toute liberté.</li>
-									</ul>
-								</div>
-								<Button
-									variant="outline"
-									className="border-[#F89CCF] text-[#F89CCF] hover:bg-[#F89CCF] hover:text-white rounded-none"
-									asChild
-								>
-									<Link href="/dream_cafe">
-										Découvrir le Dream Café <ChevronRight className="ml-2 h-4 w-4" />
-									</Link>
-								</Button>
-							</div>
-						</div>
-					</section>
-				)
-			})()}
-
-			{/* 5. Focus Studio Photo */}
-			{(() => {
-				const [ref, visible] = useReveal()
-				return (
-					<section ref={ref} className="relative py-12 bg-gradient-to-br from-[#F5F5F0] via-white to-[#E6DED3]">
-						<div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-							<div className={visible ? "fade-in-right order-2 md:order-1" : "opacity-0 order-2 md:order-1"}>
-								<span className="text-5xl mb-4 block">📸</span>
-								<h2 className="font-serif text-4xl font-medium mb-6 text-stone-800">
-									Studio photo professionnel
-								</h2>
-								<p className="text-stone-600 mb-6 text-lg">
-									Un espace lumineux, à l'étage et au sous-sol, adapté aux shootings pro, portraits, packshots ou création de contenu social media. Équipé en lumière naturelle et artificielle, fonds multiples, zones modulables.
-								</p>
-								{/* Ajout des infos clés */}
-								<div className="bg-[#F5F5F0] bg-opacity-60 rounded-lg p-6 mb-6 shadow flex flex-col gap-3">
-									<h3 className="font-serif text-xl text-[#C6A76D] mb-2">Idéal si tu es...</h3>
-									<ul className="list-disc pl-5 text-stone-700 space-y-1 text-base">
-										<li>Photographe ou vidéaste en quête d’un studio équipé et flexible</li>
-										<li>Modèle, influenceur ou marque voulant réaliser un shooting pro</li>
-										<li>Créateur de contenu avec besoin de fonds variés, lumières, réflecteurs</li>
-										<li>En recherche d’un espace pour tes lookbooks, campagnes ou portraits</li>
-										<li className="mt-2 font-semibold text-[#C6A76D]">| Tout est là pour créer un visuel impactant et professionnel, à ton image.</li>
-									</ul>
-								</div>
-								<Button
-									variant="outline"
-									className="border-[#C6A76D] text-[#C6A76D] bg-white hover:bg-[#C6A76D] hover:text-white rounded-none"
-									asChild
-								>
-									<Link href="/studio-photo">
-										Découvrir le Studio Photo <ChevronRight className="ml-2 h-4 w-4" />
-									</Link>
-								</Button>
-							</div>
-							<div className="relative h-[400px] w-full order-1 md:order-2 rounded-2xl overflow-hidden shadow-xl animate-fade-in">
-								<img
-									src="/podcast2.jpg?height=500&width=600"
-									alt="Studio Photo"
-									className="object-cover w-full h-full"
-								/>
-							</div>
-						</div>
-					</section>
-				)
-			})()}
 
 			{/* 6. Abonnements : l'expérience continue */}
 			<section className="relative bg-[#F5F5F0] py-24">

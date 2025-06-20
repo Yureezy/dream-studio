@@ -18,10 +18,10 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Dream Studio by LAYONN Style",
+  title: "DreamStudio - Montpellier",
   description:
     "Un espace premium au cœur de Montpellier alliant charme authentique et modernité pour tous vos projets créatifs",
-    generator: 'v0.dev'
+    generator: 'Y.dev'
 }
 
 export default function RootLayout({

@@ -161,3 +161,18 @@ html {
 .fade-out-scale {
   animation: fade-out-scale 0.7s cubic-bezier(.4,0,.2,1) both;
 }
+@keyframes fade-in-heading {
+  from { opacity: 0; transform: translateY(-48px) scale(0.96);}
+  to { opacity: 1; transform: none; }
+}
+@keyframes fade-in-paragraph {
+  from { opacity: 0; transform: translateY(48px) scale(1.04);}
+  to { opacity: 1; transform: none; }
+}
+@keyframes fade-in-span {
+  from { opacity: 0; letter-spacing: 0.2em; filter: blur(8px);}
+  to { opacity: 1; letter-spacing: normal; filter: blur(0);}
+}
+.fade-in-heading { animation: fade-in-heading 1.1s cubic-bezier(.4,0,.2,1) both; }
+.fade-in-paragraph { animation: fade-in-paragraph 1.1s cubic-bezier(.4,0,.2,1) both; }
+.fade-in-span { animation: fade-in-span 1.2s cubic-bezier(.4,0,.2,1) both; }
