@@ -1,129 +1,100 @@
 "use client"
 
-import { useState, useRef } from "react"
 import Link from "next/link"
-import { ChevronDown, Calendar, Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import { Menu } from "lucide-react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isStudiosOpen, setIsStudiosOpen] = useState(false)
-  const closeTimeout = useRef<NodeJS.Timeout | null>(null)
+  const [hide, setHide] = useState(false)
 
-  const handleMouseEnter = () => {
-    if (closeTimeout.current) clearTimeout(closeTimeout.current)
-    setIsStudiosOpen(true)
-  }
-
-  const handleMouseLeave = () => {
-    closeTimeout.current = setTimeout(() => setIsStudiosOpen(false), 150)
-  }
+  useEffect(() => {
+    const onScroll = () => {
+      const univers = document.getElementById("univers")
+      if (!univers) return
+      const rect = univers.getBoundingClientRect()
+      setHide(rect.top <= 80) // 80px = hauteur du header
+    }
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <span className="font-serif text-xl font-medium">Dream Studio</span>
-          </Link>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-500 ${
+        hide ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
+    >
+      <div className="relative flex items-center justify-between h-16 px-4 md:px-8">
+        {/* Menu burger à gauche */}
+        <button
+          className="md:hidden flex items-center justify-center h-10 w-10"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Ouvrir le menu"
+        >
+          <Menu className="h-7 w-7 text-stone-800" />
+        </button>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/dream-cafe" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Dream Café
-            </Link>
-            <Link href="/studio-photo" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Studio photo
-            </Link>
-            <Link href="/studio-podcast" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Podcast
-            </Link>
-            <Link href="/evenements" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Réception
-            </Link>
-            <Link href="/abonnement" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              Abonnement
-            </Link>
-            <Link href="/a-propos" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-              À propos
-            </Link>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button asChild className="border-[#C6A76D] text-[#C6A76D] bg-stone-800 hover:text-white rounded-none">
-              <Link href="/reservation">
-                <Calendar className="mr-2 h-4 w-4" /> Réserver
-              </Link>
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6 text-stone-800" /> : <Menu className="h-6 w-6 text-stone-800" />}
-          </button>
+        {/* Titre centré */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+          <span
+            className="text-stone-800 text-2xl font-bold"
+            style={{ fontFamily: '"Dream Avenue", serif' }}
+          >
+            Dream Studio
+          </span>
         </div>
+
+        {/* Espace à droite pour équilibrer */}
+        <div className="w-10 h-10 md:hidden" />
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menu mobile déroulant */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col space-y-4">
-              <Link
-                href="/"
-                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Accueil
-              </Link>
-              <Link
-                href="/studio-photo"
-                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Studio photo
-              </Link>
-              <Link
-                href="/studio-podcast"
-                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Podcast
-              </Link>
-              <Link
-                href="/dream-cafe"
-                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Dream Café
-              </Link>
-              <Link
-                href="/evenements"
-                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Réception
-              </Link>
-              <Link href="/abonnement" className="text-stone-800 hover:text-[#C6A76D] transition-colors">
-                Abonnement
-              </Link>
-              <Link
-                href="/a-propos"
-                className="text-stone-800 hover:text-[#C6A76D] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                À propos
-              </Link>
-              <Button asChild className="mt-8 border-[#C6A76D] text-[#C6A76D] bg-white hover:bg-[#C6A76D] hover:text-white rounded-none">
-                <Link href="/reservation" onClick={() => setIsMenuOpen(false)}>
-                  <Calendar className="mr-2 h-4 w-4" /> Réserver
-                </Link>
-              </Button>
-            </nav>
-          </div>
-        </div>
+        <nav className="fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-white/90 shadow-lg z-50 flex flex-col gap-6 p-8 md:hidden animate-fade-in-left">
+          <Link
+            href="/dream-cafe"
+            className="text-stone-800 text-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Dream Café
+          </Link>
+          <Link
+            href="/studio-photo"
+            className="text-stone-800 text-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Studio photo
+          </Link>
+          <Link
+            href="/studio-podcast"
+            className="text-stone-800 text-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Podcast
+          </Link>
+          <Link
+            href="/evenements"
+            className="text-stone-800 text-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Réception
+          </Link>
+          <Link
+            href="/abonnement"
+            className="text-stone-800 text-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Abonnement
+          </Link>
+          <Link
+            href="/a-propos"
+            className="text-stone-800 text-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            À propos
+          </Link>
+        </nav>
       )}
     </header>
   )

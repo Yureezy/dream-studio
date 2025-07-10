@@ -9,25 +9,37 @@ import VideoHero from "@/components/video-hero"
 const univers = [
 	{
 		key: "dream-cafe",
-		bg: "linear-gradient(0deg,rgb(245, 182, 220) 0%, rgba(0,0,0,0.08) 100%), url(/cafe.png) center/cover no-repeat fixed",
+		bg: "url(/cafe.png) center/cover no-repeat fixed",
 		slides: [
 			{
 				effect: "",
 				content: (
-					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
-						Le Dream 
-						<span className="text-[#e8dcca] drop-shadow-[0_2px_10px_rgba(232,220,202,0.3)] fade-in-span">Café</span>
-					</h2>
+					<div className="flex flex-col items-center w-full max-w-md mx-auto px-2">
+						<p className="uppercase text-stone-800 uppercase text-base md:text-lg tracking-widest fade-in-paragraph text-center">
+							BIENVENUE AU
+						</p>
+						<h2 className="font-dream-avenue text-3xl md:text-5xl text-stone-800 uppercase text-center fade-in-heading">
+							Dream Studio
+						</h2>
+						<div className="flex justify-center w-full">
+							<span
+								className="uppercase border-b-2 border-[#c89511]  text-stone-800 uppercase font-bold tracking-widest fade-in-span bg-white/80 text-base md:text-lg text-center"
+								style={{ width: "fit-content" }}
+							>
+								LÀ OÙ LES RÊVES PRENNENT VIE
+							</span>
+						</div>
+					</div>
 				)
 			},
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex">
-					  <p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
-					     style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
-					    Un coffee shop girly et cosy, parfait pour se retrouver, brainstormer, créer ou savourer un moment.
-					    <span className="block mt-4 text-[#e8dcca] text-xl italic fade-in-span">Votre bulle créative au cœur de Montpellier</span>
+					<div className="w-full flex flex justify-center">
+					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						Un espace dans lequel tu pourras laisser place à ta créativité,
+						en toute intimité, dans une ambiance chaleureuse et cosy.
 					  </p>
 					</div>
 				)
@@ -35,15 +47,22 @@ const univers = [
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex justify-end">
-					  <p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
-					    <span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
-					    <span className="block mb-3 fade-in-span">Un lieu <span className="font-medium text-[#e8dcca]">Instagramable</span> pour shooter ton contenu lifestyle</span>
-					    <span className="block mb-3 fade-in-span">Créer des <span className="font-medium text-[#e8dcca]">reels, vlogs ou interviews</span> dans une ambiance chaleureuse</span>
-					    <span className="block mb-3 fade-in-span">Tourner des vidéos dans un décor cosy, avec une belle lumière naturelle</span>
-					    <span className="block mb-3 fade-in-span">Travailler ou brainstormer avec d'autres créateurs autour d'un café</span>
-					    <span className="block fade-in-span">Disposer d'un espace stylé pour faire vivre ton univers de marque</span>
-					    <span className="block mt-8 font-serif text-lg text-[#e8dcca] fade-in-span">Un spot visuel, créatif et intimiste pour donner vie à tes idées en toute liberté</span>
+					<div className="w-full flex justify-center">
+					  <p className="uppercase text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
+						ici chaque espace <br></br>
+						est adapté à tes besoins
+					  </p>
+					</div>
+				)
+			},
+			{
+				effect: "",
+				content: (
+					<div className="w-full flex flex justify-center">
+					  <p className="text-l md:text-2xl mb-10 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						Alors si tu cherches un endroit où créer du contenu, enregistrer tes formations,
+						faire un shooting photo ou même enregistrer un podcast, tu es au bon endroit.
 					  </p>
 					</div>
 				)
@@ -55,7 +74,7 @@ const univers = [
 					<Button
 						asChild
 						variant="link"
-						className="text-white text-2xl font-semibold underline underline-offset-4 mt-4"
+						className="text-2xl font-semibold underline underline-offset-4 mt-4"
 					>
 						<Link href="/dream-cafe">
 							Découvrir le Dream Café <ChevronRight className="ml-2 h-6 w-6" />
@@ -66,233 +85,332 @@ const univers = [
 			},
 		]
 	},
-	{
-		key: "layonn",
-		bg: "linear-gradient(0deg, #E6DED3cc 0%, rgba(0,0,0,0.08) 100%), url(/boutique.jpg) center/cover no-repeat",
-		slides: [
-			{
-				effect: "",
-				content: (
-					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
-						Boutique <span className="text-[#E6DED3] drop-shadow-[0_2px_10px_rgba(230,221,211,0.3)] fade-in-span">LAYONN</span>
+{
+	key: "studio-photo",
+	bg: "url(/photo.png) center/cover no-repeat fixed",
+	slides: [
+		{
+			effect: "",
+			content: (
+				<div className="flex flex-col items-center w-full max-w-md mx-auto px-2">
+					<h2 className="font-dream-avenue text-3xl md:text-5xl text-stone-800 uppercase text-center fade-in-heading">
+						Dream Shoot
 					</h2>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="w-full flex">
-					  <p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
-					     style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
-					    Un corner store élégant mettant en lumière la marque de mode haut de gamme Layonn et ses collections slow fashion.
-					    <span className="block mt-4 text-[#E6DED3] text-xl italic fade-in-span">L’expérience shopping unique à Montpellier</span>
-					  </p>
+					<div className="flex justify-center w-full">
+					<p className="uppercase text-stone-800 uppercase text-lg font-bold md:text-l tracking-widest mb-6 fade-in-paragraph text-center">
+						l’espace shooting
+					</p>
 					</div>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="w-full flex justify-end">
-					  <p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
-					    <span className="block font-serif text-2xl mb-6 fade-in-span">Notre sélection :</span>
-					    <span className="block mb-3 fade-in-span">Parfums, accessoires et prêt-à-porter conçus avec passion et éthique</span>
-					    <span className="block mb-3 fade-in-span">Matériaux nobles, design intemporel, production éthique</span>
-					    <span className="block mb-3 fade-in-span">Conseils personnalisés et accueil chaleureux</span>
-					    <span className="block mt-8 font-serif text-lg text-[#E6DED3] fade-in-span">Un univers raffiné et inspirant, pensé pour durer</span>
-					  </p>
-					</div>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="w-full flex justify-center">
+					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+					<span className="uppercase font-bold block font-serif text-xl mb-6 fade-in-span border-b-2 border-[#c89511]"
+  							style={{ display: "inline-block", width: "fit-content" }}>Idéal si tu es :</span>
+						<span className="uppercase font-bold block fade-in-span">photographe <span className=" mb-3 font-light fade-in-span">ou</span> vidéaste</span>
+							<span className="font-light fade-in-span ">En quête d’un studio flexible et équipé pour tes projets</span>
+						<span className="uppercase font-bold block mt-8 fade-in-span">model.e - marque <span className=" mb-3 font-light fade-in-span">ou</span> influenceur.SE</span>
+							<span className="font-light fade-in-span ">Voulant réaliser un shooting professionnel</span>
+						<span className="uppercase font-bold block mt-8  fade-in-span">créateur.trice de contenus</span>
+							<span className="font-light fade-in-span ">Avec des besoins d’ambiances différentes, fonds variés, lumières, réflecteurs ..</span>
+
+						</p>
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="w-full flex justify-center">
+					<p className="uppercase font-bold text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
+					l’espace idéal pour tes lookbooks, campagnes ou portraits !
+					</p>
+				</div>
+			)
+		},
+		{
+  effect: "",
+  content: (
+    <div className="w-full flex justify-center">
+      <ul
+        className="mb-10 py-6 max-w-3xl fade-in-paragraph text-left bg-white/80 border-t-2 border-r-2 border-[#c89511] shadow-xl"
+        style={{ textShadow: "0 2px 16px rgba(0,0,0,0.10)" }}
+      >
+        <li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Mur en pierres apparentes</li>
+        <li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Appareil photo Sony Alpha 7</li>
+        <li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Trépieds</li>
+        <li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Lumière 1</li>
+        <li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Lumière 2</li>
+        <li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Chaises, tabourets, accessoires ...</li>
+      </ul>
+    </div>
+  )
+},
+		{
+			effect: "",
+			content: (
+				<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
-						className="text-white text-2xl font-semibold underline underline-offset-4 mt-4"
-					>
-						<Link href="https://layonnstyle.com/" target="_blank" rel="noopener noreferrer">
-							Découvrir la boutique <ChevronRight className="ml-2 h-6 w-6" />
-						</Link>
-					</Button>
-					</div>
-				)
-			},
-		]
-	},
-	{
-		key: "studio-photo",
-		bg: "linear-gradient(0deg, #F5F5F0cc 0%, rgba(0,0,0,0.08) 100%), url(/photo.jpg) center/cover no-repeat",
-		slides: [
-			{
-				effect: "",
-				content: (
-					<h2 className="font-serif text-7xl md:text-8xl font-bold text-stone-800 drop-shadow-[0_5px_15px_rgba(0,0,0,0.15)] mb-10 text-center fade-in-heading">
-						Studio <span className="text-[#F5F5F0] drop-shadow-[0_2px_10px_rgba(245,245,240,0.3)] fade-in-span">Photo</span>
-					</h2>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="w-full flex">
-						<p className="text-stone-800 text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
-						  style={{ textShadow: "0 2px 16px rgba(0,0,0,0.10)" }}>
-						  Un espace lumineux, à l'étage et au sous-sol, adapté aux shootings pro, portraits, packshots ou création de contenu social media.
-						  <span className="block mt-4 text-[#F5F5F0] text-xl italic fade-in-span">Lumière naturelle, fonds multiples, zones modulables</span>
-						</p>
-					</div>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="w-full flex justify-end">
-						<p className="text-stone-800 text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
-							<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu es :</span>
-							<span className="block mb-3 fade-in-span">Photographe ou vidéaste en quête d’un studio équipé et flexible</span>
-							<span className="block mb-3 fade-in-span">Modèle, influenceur ou marque voulant réaliser un shooting pro</span>
-							<span className="block mb-3 fade-in-span">Créateur de contenu avec besoin de fonds variés, lumières, réflecteurs</span>
-							<span className="block mb-3 fade-in-span">En recherche d’un espace pour tes lookbooks, campagnes ou portraits</span>
-							<span className="block mt-8 font-serif text-lg text-[#F5F5F0] fade-in-span">Tout est là pour créer un visuel impactant et professionnel, à ton image</span>
-						</p>
-					</div>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
-					<Button
-						asChild
-						variant="link"
-						className="text-stone-800 text-2xl font-semibold underline underline-offset-4 mt-4"
+						className="text-2xl font-semibold underline underline-offset-4 mt-4"
 					>
 						<Link href="/studio-photo">
 							Découvrir le Studio Photo <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
-					</div>
-				)
-			},
-		]
-	},
-	{
-		key: "studio-podcast",
-		bg: "linear-gradient(0deg, #bc43c7cc 0%, rgba(0,0,0,0.08) 100%), url(/podcast.jpg) center/cover no-repeat",
-		slides: [
-			{
-				effect: "",
-				content: (
-					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
-						Studio <span className="text-[#bc43c7] drop-shadow-[0_2px_10px_rgba(188,67,199,0.3)] fade-in-span">Podcast</span>
+				</div>
+			)
+		},
+	]
+},
+{
+	key: "studio-podcast",
+	bg: "url(/podcast.png) center/cover no-repeat fixed",
+	slides: [
+		{
+			effect: "",
+			content: (
+				<div className="flex flex-col items-center w-full max-w-md mx-auto px-2">
+					<h2 className="font-dream-avenue text-3xl md:text-5xl text-stone-800 uppercase text-center fade-in-heading">
+						Dream Cast’
 					</h2>
-				)
-			},
-			{
+					<div className="flex justify-center w-full">
+						<p className="uppercase text-stone-800 uppercase text-lg font-bold md:text-l tracking-widest mb-6 fade-in-paragraph text-center">
+						l’espace Podcast
+					</p>
+					</div>
+				</div>
+			)
+		},
+					{
 				effect: "",
 				content: (
-					<div className="w-full flex">
-						<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
-						  style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
-						  Un studio podcast premium, sonorisé et esthétique, équipé pour les formats longs, interviews, capsules ou lives.
-						  <span className="block mt-4 text-[#bc43c7] text-xl italic fade-in-span">Son pro, multicaméra, régie technique</span>
-						</p>
+					<div className="w-full flex justify-center">
+						<p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+							style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						<span className="uppercase font-bold block font-serif text-2xl mb-6 fade-in-span border-b-2 border-[#c89511]"
+								style={{ display: "inline-block", width: "fit-content" }}>idéal si tu veux :</span>
+							<span className="uppercase font-bold block fade-in-span">enregistrer un podcast</span>
+								<span className="font-light fade-in-span ">En solo ou à plusieurs, ou faire des interviews</span>
+							<span className="uppercase font-bold block mt-8 fade-in-span">filmer des vidéos pédagogiques</span>
+								<span className="font-light fade-in-span ">Comme de la formation ou des masterclasses</span>
+							<span className="uppercase font-bold block mt-8  fade-in-span">créer du contenu inspirant</span>
+								<span className="font-light fade-in-span ">Style format talk filmé pour partager tes connaissances</span>
+
+							</p>
 					</div>
 				)
 			},
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex justify-end">
-						<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
-							<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
-							<span className="block mb-3 fade-in-span">Enregistrer un podcast solo ou à plusieurs, dans un décor chaleureux</span>
-							<span className="block mb-3 fade-in-span">Créer du contenu vidéo pédagogique ou inspirant (formations, interviews)</span>
-							<span className="block mb-3 fade-in-span">Lancer ta chaîne YouTube ou ton format de talk filmé</span>
-							<span className="block mb-3 fade-in-span">Te concentrer sur ton contenu : matériel prêt à l’emploi, son & lumière optimisés</span>
-							<span className="block mt-8 font-serif text-lg text-[#bc43c7] fade-in-span">Une ambiance feutrée et pro, pour poser ta voix et propulser tes idées</span>
+					<div className="w-full flex justify-center">
+						<p className="uppercase font-bold text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
+						Le matos est prêt à l’emploi, lumière, son, néons - 
+						tout est fait pour que tu te concentres sur ton contenu !
 						</p>
 					</div>
 				)
 			},
 			{
-				effect: "",
-				content: (
-					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
+	effect: "", 
+	content: (
+		<div className="w-full flex justify-center">
+		<ul
+			className="mb-10 py-6 max-w-3xl fade-in-paragraph text-left bg-white/80 border-r-2 border-[#c89511] shadow-xl"
+			style={{ textShadow: "0 2px 16px rgba(0,0,0,0.10)" }}
+		>
+			<li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Mur en pierres apparentes</li>
+			<li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Appareil photo Sony Alpha 7</li>
+			<li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Trépieds</li>
+			<li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Lumière 1</li>
+			<li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Lumière 2</li>
+			<li className="px-6 py-2 text-l md:text-l text-stone-800 uppercase">Chaises, tabourets, accessoires ...</li>
+		</ul>
+		</div>
+	)
+	}, 
+		{
+			effect: "",
+			content: (
+				<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
-						className="text-white text-2xl font-semibold underline underline-offset-4 mt-4"
+						className="text-2xl font-semibold underline underline-offset-4 mt-4"
 					>
 						<Link href="/studio-podcast">
 							Découvrir le Studio Podcast <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
-					</div>
-				)
-			},
-		]
-	},
-	{
-		key: "evenements",
-		bg: "linear-gradient(0deg, #C6A76Dcc 0%, rgba(0,0,0,0.08) 100%), url(/reception.jpg) center/cover no-repeat",
-		slides: [
-			{
-				effect: "",
-				content: (
-					<h2 className="font-serif text-7xl md:text-8xl font-bold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.25)] mb-10 text-center fade-in-heading">
-						Lieux de <span className="text-[#C6A76D] drop-shadow-[0_2px_10px_rgba(198,167,109,0.3)] fade-in-span">réception</span> & formation
+				</div>
+			)
+		},
+	]
+},
+{
+	key: "evenements",
+	bg: "url(/reception.jpg) center/cover no-repeat fixed",
+	slides: [
+		{
+			effect: "",
+			content: (
+				<div className="flex flex-col items-center w-full max-w-md mx-auto px-2">
+						<p className="uppercase text-stone-800 uppercase text-base md:text-lg tracking-widest fade-in-paragraph text-center">
+						L'ESPACE ÉVÉNEMENTIEL
+					</p>
+					<h2 className="font-dream-avenue text-3xl md:text-5xl text-stone-800 uppercase text-center fade-in-heading">
+						réception & formation
 					</h2>
-				)
-			},
-			{
+					<div className="flex justify-center w-full">
+							<span
+								className="uppercase border-b-2 border-[#FFD600]  text-stone-800 uppercase font-bold tracking-widest fade-in-span bg-white/80 text-base md:text-lg text-center"
+								style={{ width: "fit-content" }}
+							>
+							ÉVÉNEMENTS & ATELIERS
+						</span>
+					</div>
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+			<div className="w-full flex flex justify-center">
+					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						Un espace chaleureux, totalement privatisable pour vos afterworks, lancements de produits, formations et ateliers.
+						<span className="block mt-4 text-[#C6A76D] text-l italic fade-in-span">Ambiance premium, équipements modernes, équipe dédiée</span>
+					</p>
+				</div>
+			)
+		},
+		{
 				effect: "",
 				content: (
-					<div className="w-full flex">
-						<p className="text-white text-2xl md:text-3xl font-medium mb-10 max-w-3xl fade-in-paragraph text-left"
-						  style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
-						  Un espace chaleureux, totalement privatisable pour vos afterworks, lancements de produits, formations et ateliers.
-						  <span className="block mt-4 text-[#C6A76D] text-xl italic fade-in-span">Ambiance premium, équipements modernes, équipe dédiée</span>
-						</p>
+					<div className="w-full flex justify-center">
+					  <p className="uppercase text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
+						ici chaque espace <br></br>
+						est adapté à tes besoins
+					  </p>
 					</div>
 				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="w-full flex justify-end">
-						<p className="text-white text-xl md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-right">
-							<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
-							<span className="block mb-3 fade-in-span">Organiser un coaching privé, un shooting VIP ou une masterclass intimiste</span>
-							<span className="block mb-3 fade-in-span">Créer une expérience exclusive pour le lancement d’une marque ou d’un produit</span>
-							<span className="block mb-3 fade-in-span">Proposer un atelier confidentiel (développement perso, beauté, formation...)</span>
-							<span className="block mb-3 fade-in-span">Bénéficier d’un lieu multifonction, adaptable à ton univers</span>
-							<span className="block mt-8 font-serif text-lg text-[#C6A76D] fade-in-span">Un espace rare pour connecter, transmettre, vibrer et créer sans distraction</span>
-						</p>
-					</div>
-				)
-			},
-			{
-				effect: "",
-				content: (
-					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
+		},
+		{
+			effect: "",
+			content: (
+						<div className="w-full flex flex justify-center">
+					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
+						<span className="block mb-3 fade-in-span">Organiser un coaching privé, un shooting VIP ou une masterclass intimiste</span>
+						<span className="block mb-3 fade-in-span">Créer une expérience exclusive pour le lancement d’une marque ou d’un produit</span>
+						<span className="block mb-3 fade-in-span">Proposer un atelier confidentiel (développement perso, beauté, formation...)</span>
+						<span className="block mb-3 fade-in-span">Bénéficier d’un lieu multifonction, adaptable à ton univers</span>
+						<span className="block mt-8 font-serif text-lg text-[#C6A76D] fade-in-span">Un espace rare pour connecter, transmettre, vibrer et créer sans distraction</span>
+					</p>
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
-						className="text-white text-2xl font-semibold underline underline-offset-4 mt-4"
+						className="text-2xl font-semibold underline underline-offset-4 mt-4"
 					>
 						<Link href="/evenements">
 							Découvrir l’espace <ChevronRight className="ml-2 h-6 w-6" />
 						</Link>
 					</Button>
+				</div>
+			)
+		},
+	]
+},
+{
+	key: "layonn",
+	bg: "url(/boutique.jpg) center/cover no-repeat fixed ",
+	slides: [
+		{
+			effect: "",
+			content: (
+				<div className="flex flex-col items-center w-full max-w-md mx-auto px-2">
+					<p className="uppercase text-stone-800 uppercase text-base md:text-lg tracking-widest fade-in-paragraph text-center">
+						L'UNIVERS MODE & LIFESTYLE
+					</p>
+					<h2 className="font-dream-avenue text-3xl md:text-5xl text-stone-800 uppercase text-center fade-in-heading">
+						Boutique LAYONN
+					</h2>
+					<div className="flex justify-center w-full">
+						<span
+							className="uppercase border-b-2 border-[#FFD600] text-stone-800 uppercase font-bold tracking-widest fade-in-span bg-white/80 text-base md:text-lg text-center"
+							style={{ width: "fit-content" }}
+						>
+							SLOW FASHION & CRÉATIVITÉ
+						</span>
 					</div>
-				)
-			},
-		]
-	},
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="w-full flex justify-center">
+					<p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						Un corner store élégant mettant en lumière la marque de mode haut de gamme Layonn et ses collections slow fashion.
+					</p>
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="w-full flex justify-center">
+					<p className="uppercase text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center tracking-widest">
+						L’EXPÉRIENCE SHOPPING UNIQUE À MONTPELLIER
+					</p>
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="w-full flex justify-center">
+					<p className="text-l md:text-2xl mb-10 max-w-3xl fade-in-paragraph text-left"
+						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
+						Découvrez nos parfums, accessoires et pièces de prêt-à-porter conçus avec passion et éthique.
+					</p>
+				</div>
+			)
+		},
+		{
+			effect: "",
+			content: (
+				<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
+					<Button
+						asChild
+						variant="link"
+						className="text-2xl font-semibold underline underline-offset-4 mt-4"
+					>
+						<Link href="https://layonnstyle.com/" target="_blank" rel="noopener noreferrer">
+							Découvrir la boutique <ChevronRight className="ml-2 h-6 w-6" />
+						</Link>
+					</Button>
+				</div>
+			)
+		},
+	]
+},
 ]
 
 export default function Home() {
@@ -312,39 +430,38 @@ export default function Home() {
 			<div className="fixed top-0 left-0 z-50 h-1 bg-gradient-to-r from-[#C6A76D] via-[#FAD5E5] to-[#C6A76D]" style={{width: `${scroll}%`}} />
 
 			{/* 1. Hero immersif */}
-      <VideoHero />
+	  <VideoHero />
 
 			{/* Univers storytelling immersif */}
 			{univers.map((u) => {
   const [ref, visible] = useReveal()
   return (
-    <section
-      key={u.key}
-      ref={ref}
-      className={`relative min-h-screen w-full flex flex-col items-center justify-center snap-start overflow-hidden transition-all duration-1000 ${
-        visible ? "fade-in-scale" : "fade-out-scale"
-      }`}
-      style={{ background: u.bg }}
-    >
-      <div className="flex flex-col items-center justify-center w-full h-full px-4 py-24">
-        {u.slides.map((slide, idx) => (
-          <div
-            key={u.key + "-slide-" + idx}
-            className={`w-full ${slide.effect} transition-all duration-1000`}
-            style={{ transitionDelay: `${idx * 180}ms` }}
-          >
-            {slide.content}
-          </div>
-        ))}
-      </div>
-    </section>
+	<section
+	  id="univers"
+	  key={u.key}
+	  ref={ref}
+	  className="relative min-h-screen w-full flex flex-col items-center justify-center snap-start overflow-hidden transition-all duration-1000"
+	  style={{ background: u.bg }}
+	>
+	  <div className="flex flex-col items-center justify-center w-full h-full px-4 py-24">
+		{u.slides.map((slide, idx) => (
+		  <div
+			key={u.key + "-slide-" + idx}
+			className={`w-full ${slide.effect} transition-all duration-1000`}
+			style={{ transitionDelay: `${idx * 180}ms` }}
+		  >
+			{slide.content}
+		  </div>
+		))}
+	  </div>
+	</section>
   )
 })}
 
 			{/* 6. Abonnements : l'expérience continue */}
 			<section className="relative bg-[#F5F5F0] py-24">
 				<div className="container mx-auto px-4">
-					<h2 className="font-serif text-4xl font-medium mb-16 text-center text-stone-800 animate-fade-in">
+					<h2 className="font-serif text-4xl font-medium mb-16 text-center text-stone-800 uppercase animate-fade-in">
 						Nos abonnements exclusifs
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -354,10 +471,10 @@ export default function Home() {
 							const [ref, visible] = useReveal()
 							return (
 								<div ref={ref} className={visible ? "fade-in-left" : "opacity-0"}>
-									<div className="bg-white rounded-xl shadow-lg p-10 flex flex-col animate-fade-in-up">
+									<div className="bg-white rounded-l shadow-lg p-10 flex flex-col animate-fade-in-up">
 										<div className="flex items-center mb-4">
 											<span className="text-3xl mr-3">🎙</span>
-											<h3 className="font-serif text-2xl font-medium text-stone-800">Abonnement Creator</h3>
+											<h3 className="font-serif text-2xl font-medium text-stone-800 uppercase">Abonnement Creator</h3>
 										</div>
 										<p className="text-[#C6A76D] font-bold mb-2">Dès 39,90€/mois • Limité à 40 membres</p>
 										<p className="text-stone-700 mb-4">
@@ -371,7 +488,7 @@ export default function Home() {
 											<li>• -20% on the LAYONN brand (in store)</li>
 										</ul>
 										<div className="mb-4">
-											<span className="font-semibold text-stone-800">Formules dégressives :</span>
+											<span className="font-semibold text-stone-800 uppercase">Formules dégressives :</span>
 											<ul className="ml-4 text-stone-700">
 												<li>• 1 mois : 59,90€ TTC</li>
 												<li>• 6 mois : 49,90€/mois</li>
@@ -389,10 +506,10 @@ export default function Home() {
 							const [ref, visible] = useReveal()
 							return (
 								<div ref={ref} className={visible ? "fade-in-right" : "opacity-0"}>
-									<div className="bg-white rounded-xl shadow-lg p-10 flex flex-col animate-fade-in-up">
+									<div className="bg-white rounded-l shadow-lg p-10 flex flex-col animate-fade-in-up">
 										<div className="flex items-center mb-4">
 											<span className="text-3xl mr-3">💼</span>
-											<h3 className="font-serif text-2xl font-medium text-stone-800">Abonnement Pro & B2B</h3>
+											<h3 className="font-serif text-2xl font-medium text-stone-800 uppercase">Abonnement Pro & B2B</h3>
 										</div>
 										<p className="text-[#C6A76D] font-bold mb-2">Dès 159€/mois HT • Limité à 20 entreprises</p>
 										<p className="text-stone-700 mb-4">
@@ -408,7 +525,7 @@ export default function Home() {
 											<li>• Accès aux afterworks professionnels du Studio</li>
 										</ul>
 										<div className="mb-4">
-											<span className="font-semibold text-stone-800">Formules dégressives :</span>
+											<span className="font-semibold text-stone-800 uppercase">Formules dégressives :</span>
 											<ul className="ml-4 text-stone-700">
 												<li>• 1 mois : 199€ HT</li>
 												<li>• 6 mois : 179€/mois</li>
@@ -432,7 +549,7 @@ export default function Home() {
 			<section className="relative py-12 bg-gradient-to-br from-white via-[#F5F5F0] to-[#E6DED3]">
 				<div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16">
 					<div>
-						<h2 className="font-serif text-4xl font-medium mb-8 text-stone-800">Contactez-nous</h2>
+						<h2 className="font-serif text-4xl font-medium mb-8 text-stone-800 uppercase">Contactez-nous</h2>
 						<p className="text-stone-600 mb-8 text-lg">
 							Une question, un projet ou envie de visiter ? Notre équipe vous répond avec plaisir.
 						</p>
@@ -442,7 +559,7 @@ export default function Home() {
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h4l3 10h4l3-10h4M4 10l1-2a2 2 0 012-1h10a2 2 0 012 1l1 2M4 10h16M4 10l1 2m0 0l-1 2m1-2h16m-1 2l1 2m-1-2h-16" />
 								</svg>
 								<div>
-									<h3 className="font-medium text-stone-800">Adresse</h3>
+									<h3 className="font-medium text-stone-800 uppercase">Adresse</h3>
 									<p className="text-stone-600">11 rue Alexandre Cabanel, 34000 Montpellier</p>
 								</div>
 							</div>
@@ -451,7 +568,7 @@ export default function Home() {
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h4l3 10h4l3-10h4M4 10l1-2a2 2 0 012-1h10a2 2 0 012 1l1 2M4 10h16M4 10l1 2m0 0l-1 2m1-2h16m-1 2l1 2m-1-2h-16" />
 								</svg>
 								<div>
-									<h3 className="font-medium text-stone-800">Téléphone</h3>
+									<h3 className="font-medium text-stone-800 uppercase">Téléphone</h3>
 									<p className="text-stone-600">+33 6 12 34 56 78</p>
 								</div>
 							</div>
@@ -460,14 +577,14 @@ export default function Home() {
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h4l3 10h4l3-10h4M4 10l1-2a2 2 0 012-1h10a2 2 0 012 1l1 2M4 10h16M4 10l1 2m0 0l-1 2m1-2h16m-1 2l1 2m-1-2h-16" />
 								</svg>
 								<div>
-									<h3 className="font-medium text-stone-800">Instagram</h3>
+									<h3 className="font-medium text-stone-800 uppercase">Instagram</h3>
 									<p className="text-stone-600">@dreamstudio_layonn</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className="bg-[#F5F5F0] p-10 rounded-xl shadow-lg animate-fade-in-up">
-						<h3 className="font-serif text-2xl mb-6 text-stone-800">Envoyez-nous un message</h3>
+					<div className="bg-[#F5F5F0] p-10 rounded-l shadow-lg animate-fade-in-up">
+						<h3 className="font-serif text-2xl mb-6 text-stone-800 uppercase">Envoyez-nous un message</h3>
 						<form className="space-y-4">
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 								<div>
@@ -511,7 +628,7 @@ export default function Home() {
 									className="w-full p-3 border border-stone-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C6A76D]"
 								></textarea>
 							</div>
-							<Button className="mt-8 border-[#C6A76D] text-[#C6A76D] bg-white hover:bg-[#C6A76D] hover:text-white rounded-none">Envoyer</Button>
+							<Button className="mt-8 border-[#C6A76D] text-[#C6A76D] bg-white hover:bg-[#C6A76D] hover:rounded-none">Envoyer</Button>
 						</form>
 					</div>
 				</div>
@@ -519,7 +636,7 @@ export default function Home() {
 
 			{/* Citation storytelling */}
 			<section className="py-12 bg-transparent flex justify-center">
-				<blockquote className="italic text-xl text-[#C6A76D] text-center max-w-2xl mx-auto">
+				<blockquote className="italic text-l text-[#C6A76D] text-center max-w-2xl mx-auto">
 					“Ici, chaque projet commence par une rencontre, chaque rencontre devient une histoire.”
 				</blockquote>
 			</section>
@@ -531,13 +648,13 @@ export default function Home() {
 
 			{/* 9. Appel à l'action final */}
 			<section className="py-8 bg-white text-center">
-				<h2 className="font-serif text-3xl md:text-4xl mb-6 text-stone-800 animate-fade-in-up">
+				<h2 className="font-serif text-3xl md:text-4xl mb-6 text-stone-800 uppercase animate-fade-in-up">
 					Prêt à écrire votre histoire ?
 				</h2>
 				<p className="text-stone-600 text-lg mb-8 animate-fade-in-up">
 					Rejoignez la communauté Dream Studio et vivez l’expérience créative à Montpellier.
 				</p>
-				<Button asChild className="border-[#C6A76D] text-[#C6A76D] bg-white hover:bg-[#C6A76D] hover:text-white rounded-none px-8 py-4 animate-fade-in-up">
+				<Button asChild className="border-[#C6A76D] text-[#C6A76D] bg-white hover:bg-[#C6A76D] hover:rounded-none px-8 py-4 animate-fade-in-up">
 					<Link href="/reservation">
 						Commencer l’aventure <ChevronRight className="ml-2 h-4 w-4" />
 					</Link>

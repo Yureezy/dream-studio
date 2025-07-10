@@ -6,24 +6,11 @@ import Image from "next/image"
 export default function VideoHero() {
   return (
     <div className="relative h-[100vh] md:h-[105vh] w-full overflow-hidden">
-      {/* Image Background */}
-      <div className="absolute inset-0">
-        <Image
-          src="/banner.jpg"
-          alt="Dream Studio"
-          fill
-          className="object-cover object-down"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
+
 
       {/* Hero Content */}
-      <div className="relative z-10 flex h-full items-center justify-center text-center px-4">
+      <div className="relative z-10 flex h-full items-center justify-center text-center">
         <div className="max-w-3xl">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium text-white mb-6">
-            Dream Studio
-          </h1>
           <p className="text-[#C6A76D] text-lg mb-2 animate-fade-in-up font-serif tracking-wide">
             “L’histoire commence ici…”
           </p>
