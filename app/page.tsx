@@ -421,7 +421,7 @@ export default function Home() {
 	  id="univers"
 	  key={u.key}
 	  ref={ref}
-	  className="relative min-h-screen w-full flex flex-col items-center justify-center snap-start overflow-hidden transition-all duration-1000"
+	  className="relative min-h-screen w-full flex flex-col items-center justify-center snap-start overflow-hidden transition-all duration-1000 bg-cover sm:bg-[length:100vw_60vh]"
 	  style={{ background: u.bg }}
 	>
 	  <div className="flex flex-col items-center justify-center w-full h-full px-4 py-24">
