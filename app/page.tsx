@@ -5,7 +5,6 @@ import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { useReveal } from "@/hooks/useReveal"
 import { Button } from "@/components/ui/button"
-import VideoHero from "@/components/video-hero"
 const univers = [
 	{
 		key: "dream-cafe",
@@ -23,7 +22,7 @@ const univers = [
 						</h2>
 						<div className="flex justify-center w-full">
 							<span
-								className="uppercase border-b-2 border-[#c89511]  text-stone-800 uppercase font-bold tracking-widest fade-in-span bg-white/80 text-base md:text-lg text-center"
+								className="uppercase border-b-2 border-[#c89511] text-stone-800 font-bold tracking-widest fade-in-span bg-white/80 text-base md:text-lg text-center"
 								style={{ width: "fit-content" }}
 							>
 								LÀ OÙ LES RÊVES PRENNENT VIE
@@ -35,8 +34,8 @@ const univers = [
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex flex justify-center">
-					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
+					<div className="w-full flex flex justify-center px-4 sm:px-8">
+					  <p className="text-base md:text-xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						Un espace dans lequel tu pourras laisser place à ta créativité,
 						en toute intimité, dans une ambiance chaleureuse et cosy.
@@ -47,7 +46,7 @@ const univers = [
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex justify-center">
+					<div className="w-full flex justify-center px-4 sm:px-8">
 					  <p className="uppercase text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
 						ici chaque espace <br></br>
 						est adapté à tes besoins
@@ -58,7 +57,7 @@ const univers = [
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex flex justify-center">
+					<div className="w-full flex flex justify-center px-4 sm:px-8">
 					  <p className="text-l md:text-2xl mb-10 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						Alors si tu cherches un endroit où créer du contenu, enregistrer tes formations,
@@ -67,22 +66,7 @@ const univers = [
 					</div>
 				)
 			},
-			{
-				effect: "",
-				content: (
-					<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
-					<Button
-						asChild
-						variant="link"
-						className="text-2xl font-semibold underline underline-offset-4 mt-4"
-					>
-						<Link href="/dream-cafe">
-							Découvrir le Dream Café <ChevronRight className="ml-2 h-6 w-6" />
-						</Link>
-					</Button>
-					</div>
-				)
-			},
+		
 		]
 	},
 {
@@ -107,7 +91,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="w-full flex justify-center">
+				<div className="w-full flex justify-center px-4 sm:px-8">
 					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 					<span className="uppercase font-bold block font-serif text-xl mb-6 fade-in-span border-b-2 border-[#c89511]"
@@ -126,7 +110,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="w-full flex justify-center">
+				<div className="w-full flex justify-center px-4 sm:px-8">
 					<p className="uppercase font-bold text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
 					l’espace idéal pour tes lookbooks, campagnes ou portraits !
 					</p>
@@ -136,7 +120,7 @@ const univers = [
 		{
   effect: "",
   content: (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center px-4 sm:px-8">
       <ul
         className="mb-10 py-6 max-w-3xl fade-in-paragraph text-left bg-white/80 border-t-2 border-r-2 border-[#c89511] shadow-xl"
         style={{ textShadow: "0 2px 16px rgba(0,0,0,0.10)" }}
@@ -154,14 +138,14 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
+				<div className=" flex w-full max-w-3xl mx-auto justify-center fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
-						className="text-2xl font-semibold underline underline-offset-4 mt-4"
+						className="text-stone bg-white/80 border-t-2 border-2 border-[#c89511] text-xl uppercase font-semibold mt-4"
 					>
 						<Link href="/studio-photo">
-							Découvrir le Studio Photo <ChevronRight className="ml-2 h-6 w-6" />
+							je réserve mon shoot
 						</Link>
 					</Button>
 				</div>
@@ -191,7 +175,7 @@ const univers = [
 					{
 				effect: "",
 				content: (
-					<div className="w-full flex justify-center">
+					<div className="w-full flex justify-center px-4 sm:px-8">
 						<p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
 							style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						<span className="uppercase font-bold block font-serif text-2xl mb-6 fade-in-span border-b-2 border-[#c89511]"
@@ -210,7 +194,7 @@ const univers = [
 			{
 				effect: "",
 				content: (
-					<div className="w-full flex justify-center">
+					<div className="w-full flex justify-center px-4 sm:px-8">
 						<p className="uppercase font-bold text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
 						Le matos est prêt à l’emploi, lumière, son, néons - 
 						tout est fait pour que tu te concentres sur ton contenu !
@@ -221,7 +205,7 @@ const univers = [
 			{
 	effect: "", 
 	content: (
-		<div className="w-full flex justify-center">
+		<div className="w-full flex justify-center px-4 sm:px-8">
 		<ul
 			className="mb-10 py-6 max-w-3xl fade-in-paragraph text-left bg-white/80 border-r-2 border-[#c89511] shadow-xl"
 			style={{ textShadow: "0 2px 16px rgba(0,0,0,0.10)" }}
@@ -239,14 +223,14 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="flex w-full max-w-3xl mx-auto justify-end fade-in-paragraph">
+				<div className="flex w-full max-w-3xl mx-auto justify-center fade-in-paragraph">
 					<Button
 						asChild
 						variant="link"
-						className="text-2xl font-semibold underline underline-offset-4 mt-4"
+						className="text-stone bg-white/80 border-t-2 border-2 border-[#c89511] text-xl uppercase font-semibold mt-4"
 					>
 						<Link href="/studio-podcast">
-							Découvrir le Studio Podcast <ChevronRight className="ml-2 h-6 w-6" />
+							je réserve le studio
 						</Link>
 					</Button>
 				</div>
@@ -282,7 +266,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-			<div className="w-full flex flex justify-center">
+			<div className="w-full flex flex justify-center px-4 sm:px-8">
 					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						Un espace chaleureux, totalement privatisable pour vos afterworks, lancements de produits, formations et ateliers.
@@ -294,7 +278,7 @@ const univers = [
 		{
 				effect: "",
 				content: (
-					<div className="w-full flex justify-center">
+					<div className="w-full flex justify-center px-4 sm:px-8">
 					  <p className="uppercase text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center">
 						ici chaque espace <br></br>
 						est adapté à tes besoins
@@ -305,7 +289,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-						<div className="w-full flex flex justify-center">
+						<div className="w-full flex flex justify-center px-4 sm:px-8">
 					  <p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						<span className="block font-serif text-2xl mb-6 fade-in-span">Idéal si tu veux :</span>
@@ -364,7 +348,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="w-full flex justify-center">
+				<div className="w-full flex justify-center px-4 sm:px-8">
 					<p className="text-l md:text-2xl mb-10 py-6 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						Un corner store élégant mettant en lumière la marque de mode haut de gamme Layonn et ses collections slow fashion.
@@ -375,7 +359,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="w-full flex justify-center">
+				<div className="w-full flex justify-center px-4 sm:px-8">
 					<p className="uppercase text-l md:text-2xl mb-10 max-w-2xl fade-in-paragraph text-center tracking-widest">
 						L’EXPÉRIENCE SHOPPING UNIQUE À MONTPELLIER
 					</p>
@@ -385,7 +369,7 @@ const univers = [
 		{
 			effect: "",
 			content: (
-				<div className="w-full flex justify-center">
+				<div className="w-full flex justify-center px-4 sm:px-8">
 					<p className="text-l md:text-2xl mb-10 max-w-3xl fade-in-paragraph text-left"
 						 style={{ textShadow: "0 2px 16px rgba(0,0,0,0.25)" }}>
 						Découvrez nos parfums, accessoires et pièces de prêt-à-porter conçus avec passion et éthique.
@@ -427,10 +411,7 @@ export default function Home() {
 	return (
 		<main className="flex flex-col scroll-smooth snap-y snap-mandatory">
 			{/* Barre de progression storytelling */}
-			<div className="fixed top-0 left-0 z-50 h-1 bg-gradient-to-r from-[#C6A76D] via-[#FAD5E5] to-[#C6A76D]" style={{width: `${scroll}%`}} />
-
-			{/* 1. Hero immersif */}
-	  <VideoHero />
+			<div className="fixed top-0 left-0 z-50 h-1 bg-gradient-to-r from-[#C6A76D] via-[#FAD5E5] to-[#C6A76D]" style={{width: `${scroll}%`}} />	  
 
 			{/* Univers storytelling immersif */}
 			{univers.map((u) => {

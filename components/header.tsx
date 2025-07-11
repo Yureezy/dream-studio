@@ -10,10 +10,9 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => {
-      const univers = document.getElementById("univers")
-      if (!univers) return
-      const rect = univers.getBoundingClientRect()
-      setHide(rect.top <= 80) // 80px = hauteur du header
+      const total = document.body.scrollHeight - window.innerHeight
+      const percent = (window.scrollY / total) * 100
+      setHide(percent > 2)
     }
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
